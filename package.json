@@ -9,6 +9,9 @@
     "workflow:step1": "ts-node src/signalStep1.ts",
     "workflow:step2": "ts-node src/signalStep2.ts",
     "workflow:step3": "ts-node src/signalStep3.ts",
+    "workflow:reset1": "ts-node src/resetToStep1.ts",
+    "workflow:reset2": "ts-node src/resetToStep2.ts",
+    "workflow:reset3": "ts-node src/resetToStep3.ts",
     "workflow:query": "ts-node src/queryWorkflow.ts"
   },
   "author": "Christian Brosche",
