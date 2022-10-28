@@ -19,6 +19,14 @@ const { logActivity } = proxyActivities<ReturnType<typeof createActivities>>({
   startToCloseTimeout: "2 minutes",
 });
 
+interface State {
+  step1: boolean;
+  step2: boolean;
+  step3: boolean;
+}
+
+export const getStateQuery = defineQuery<State>("getState");
+
 export async function testReset(): Promise<void> {
   let step1 = false;
   let step2 = false;
@@ -32,6 +40,13 @@ export async function testReset(): Promise<void> {
   });
   setHandler(step3Signal, () => {
     step3 = true;
+  });
+  setHandler(getStateQuery, () => {
+    return {
+      step1,
+      step2,
+      step3,
+    };
   });
 
   console.log("before step 1");
