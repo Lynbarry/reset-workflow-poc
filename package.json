@@ -1,0 +1,30 @@
+{
+  "name": "y",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "worker:start": "ts-node src/worker.ts",
+    "workflow:start": "ts-node src/startWorkflow.ts",
+    "workflow:step1": "ts-node src/signalStep1.ts",
+    "workflow:step2": "ts-node src/signalStep2.ts",
+    "workflow:step3": "ts-node src/signalStep3.ts"
+  },
+  "author": "Christian Brosche",
+  "license": "ISC",
+  "dependencies": {
+    "@temporalio/activity": "^1.4.3",
+    "@temporalio/client": "^1.4.3",
+    "@temporalio/worker": "^1.4.3",
+    "@temporalio/workflow": "^1.4.3",
+    "node-fetch": "2",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.8.4",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.7",
+    "@types/node-fetch": "^2.6.2",
+    "@types/uuid": "^8.3.4"
+  }
+}
